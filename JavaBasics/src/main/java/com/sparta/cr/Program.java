@@ -6,14 +6,17 @@ public class Program {
         System.out.println(getGreeting(timeOfDay));
     }
 
-    private static String getGreeting(int timeOfDay) {
+    public static String getGreeting(int timeOfDay) {
         String greeting;
-        if (timeOfDay >= 5 && timeOfDay <= 12) {
+        if (timeOfDay >= 0 && timeOfDay < 12) {
             greeting = "Good morning!";
         } else if (timeOfDay >= 12 && timeOfDay <= 18) {
             greeting = "Good afternoon!";
-        } else {
+        } else if(timeOfDay >= 19 && timeOfDay <=23) {
             greeting = "Good evening!";
+        }
+        else{
+            greeting = "invalid time of day";
         }
         return greeting;
     }
