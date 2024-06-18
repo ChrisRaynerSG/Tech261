@@ -18,7 +18,7 @@ public class FizzBuzz {
         return fizzBuzzString;
     }
     public static boolean isMultipleOfThree(int input){
-        return (input%3 ==0);
+        return (input%3 == 0);
     }
     public static boolean isMultipleOfFive(int input){
         return (input%5 == 0);
