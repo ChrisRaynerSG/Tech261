@@ -3,20 +3,24 @@ package com.sparta.cr;
 public class FizzBuzz {
     public static String getFizzBuzzFrom(int number){
         String fizzBuzzString = Integer.toString(number);
-        Boolean isMultipleOfThree = (number%3==0);
-        Boolean isMultipleOfFive = (number%5==0);
 
-        if(isMultipleOfThree){
-            if(isMultipleOfFive){
+        if(FizzBuzz.isMultipleOfThree(number)){
+            if(FizzBuzz.isMultipleOfFive(number)){
                 fizzBuzzString = "FizzBuzz";
                 return fizzBuzzString;
             }
             fizzBuzzString = "Fizz";
             return fizzBuzzString;
         }
-        else if(isMultipleOfFive){
+        else if(FizzBuzz.isMultipleOfFive(number)){
             fizzBuzzString ="Buzz";
         }
         return fizzBuzzString;
+    }
+    public static boolean isMultipleOfThree(int input){
+        return (input%3 ==0);
+    }
+    public static boolean isMultipleOfFive(int input){
+        return (input%5 == 0);
     }
 }

@@ -44,8 +44,8 @@ public class FizzBuzzTests {
     }
 
     @ParameterizedTest
-    @CsvSource(
-            {"5, Buzz",
+    @CsvSource({
+            "5, Buzz",
             "10, Buzz",
             "20, Buzz"
             })
@@ -57,8 +57,8 @@ public class FizzBuzzTests {
     }
 
     @ParameterizedTest
-    @CsvSource(
-            {"15, FizzBuzz",
+    @CsvSource({
+                    "15, FizzBuzz",
                     "30, FizzBuzz",
                     "60, FizzBuzz"
             })
@@ -81,7 +81,4 @@ public class FizzBuzzTests {
 
         Assertions.assertEquals(expected,actual);
     }
-
-
-
 }
