@@ -19,7 +19,7 @@ public class ProgramTest {
         Assertions.assertEquals(expectedGreeting, actualGreeting);
     }
     @Test
-    @DisplayName("Given a time of 12, the greeting should be Good afternoon!")
+    @DisplayName("Given a time of 12, then the greeting should be Good afternoon!")
     void checkThat12GivesGoodAfternoon(){
         int time = 12;
         String expectedGreeting = "Good afternoon!".toLowerCase();
@@ -27,7 +27,7 @@ public class ProgramTest {
         Assertions.assertEquals(expectedGreeting,actualGreeting);
     }
     @Test
-    @DisplayName("Given a valid time an output is displayed")
+    @DisplayName("Given a valid time then an output is displayed")
     void checkThatAllValidTimesHaveOutput(){
         boolean validOutput = true;
         for(int i = 0; i<23; i++){
@@ -38,7 +38,7 @@ public class ProgramTest {
         }
     }
     @Test
-    @DisplayName("Given an invalid time message output should reflect that")
+    @DisplayName("Given an invalid time then message output should reflect that")
     void checkThatInvalidTimeOutputCorrect(){
         int time = 25;
         String expectedGreeting = "invalid time of day".toLowerCase();
@@ -46,7 +46,7 @@ public class ProgramTest {
         Assertions.assertEquals(expectedGreeting, actualGreeting);
     }
     @Test
-    @DisplayName("Given a negative time message output should reflect that")
+    @DisplayName("Given a negative time then message output should reflect that")
     void checkForNegativeNumberOutput(){
         int time = -1;
         String expectedGreeting = "invalid time of day".toLowerCase();
