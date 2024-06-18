@@ -6,11 +6,11 @@ public class FizzBuzz {
         Boolean isMultipleOfThree = (number%3==0);
         Boolean isMultipleOfFive = (number%5==0);
 
-        if(isMultipleOfThree && isMultipleOfFive){
-            fizzBuzzString = "FizzBuzz";
-            return fizzBuzzString;
-        }
-        else if(isMultipleOfThree){
+        if(isMultipleOfThree){
+            if(isMultipleOfFive){
+                fizzBuzzString = "FizzBuzz";
+                return fizzBuzzString;
+            }
             fizzBuzzString = "Fizz";
             return fizzBuzzString;
         }
