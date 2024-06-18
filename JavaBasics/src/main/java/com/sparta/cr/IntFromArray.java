@@ -2,19 +2,16 @@ package com.sparta.cr;
 
 public class IntFromArray {
 
-    public static int getIntFromArray(int[] arrayToTest){
-        String finalIntegerString ="";
-        int finalInt = 0;
-        if(arrayToTest.length==0){
-            return finalInt;
-        }
+    public static int getIntFromArray(int[] arrayToTest) {
+        StringBuilder finalIntegerString = new StringBuilder();
 
-        for (int i = 0; i<arrayToTest.length; i++){
-            String integerToAdd;
-            integerToAdd = Integer.toString(Math.abs(arrayToTest[i]));
-            finalIntegerString += integerToAdd;
+        if (arrayToTest.length == 0) {
+            return 0;
         }
-        finalInt = Integer.parseInt(finalIntegerString);
-        return finalInt;
+        for (int i : arrayToTest) {
+            String integerToAdd = Integer.toString(Math.abs(i));
+            finalIntegerString.append(integerToAdd);
+        }
+        return Integer.parseInt(finalIntegerString.toString());
     }
 }
