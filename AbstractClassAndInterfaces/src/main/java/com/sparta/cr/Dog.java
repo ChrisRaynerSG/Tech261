@@ -1,43 +1,20 @@
 package com.sparta.cr;
 
-public class Dog {
-    private String name;
-    private String breed;
-    private int age;
+public class Dog extends Animal{
 
-    public Dog(int age, String breed, String name) {
-        this.age = age;
-        this.breed = breed;
-        this.name = name;
-    }
+    public Dog(String name, String breed, int age) {
+        super(name, breed, age);
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getBreed() {
-        return breed;
-    }
-
-    public void setBreed(String breed) {
-        this.breed = breed;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public static void main(String[] args) {
-        Dog barry = new Dog(5,"Dachsund","Barry");
+        //Overload
+        //name has to be same
+        //1. Return type
+        //2. Type of Parameters
+        //3. Order of Parameters
 
     }
 
+    @Override
+    public void play() {
+        super.play();
+    }
 }
