@@ -77,7 +77,7 @@ public class ThreeIdenticalNumbersTests {
     }
     public static Stream<Arguments> givenArrayIfNoThreeConsecutiveNumbersIdenticalReturnFalse(){
         return Stream.of(
-                Arguments.of(new int[] {2,4,1,2,2,6,4,2,7,8}),
+                Arguments.of(new int[] {2,4,1,2,-2,2,4,2,7,8}),
                 Arguments.of(new int[] {1,6,22,5,29,2,5,6,1}),
                 Arguments.of(new int[] {0,0,5})
         );
