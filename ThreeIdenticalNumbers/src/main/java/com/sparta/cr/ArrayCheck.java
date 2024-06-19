@@ -2,7 +2,7 @@ package com.sparta.cr;
 
 public class ArrayCheck {
     static boolean hasThreeConsecutiveIdenticalNumbers(int[] intArray){
-        if(intArray.length <3){
+        if(intArray == null ||intArray.length <3){
             return false;
         }
         for(int i = 0; i<intArray.length-2; i++){
