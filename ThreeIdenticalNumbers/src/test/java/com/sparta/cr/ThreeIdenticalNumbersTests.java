@@ -20,7 +20,7 @@ public class ThreeIdenticalNumbersTests {
         boolean expectedResult = false;
 
         //Act
-        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+        boolean actualResult = ArrayCheck.hasThreeConsecutiveIdenticalNumbers(inputArray);
 
         //Assert
         Assertions.assertEquals(expectedResult,actualResult);
@@ -34,7 +34,7 @@ public class ThreeIdenticalNumbersTests {
         boolean expectedResult = false;
 
         //Act
-        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+        boolean actualResult = ArrayCheck.hasThreeConsecutiveIdenticalNumbers(inputArray);
 
         //Assert
         Assertions.assertEquals(expectedResult,actualResult);
@@ -48,7 +48,7 @@ public class ThreeIdenticalNumbersTests {
         boolean expectedResult = false;
 
         //Act
-        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+        boolean actualResult = ArrayCheck.hasThreeConsecutiveIdenticalNumbers(inputArray);
 
         //Assert
         Assertions.assertEquals(expectedResult,actualResult);
@@ -63,7 +63,7 @@ public class ThreeIdenticalNumbersTests {
         boolean expectedResult = true;
 
         //Act
-        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+        boolean actualResult = ArrayCheck.hasThreeConsecutiveIdenticalNumbers(inputArray);
 
         //Assert
         Assertions.assertEquals(expectedResult,actualResult);
