@@ -1,4 +1,4 @@
-package com.sparta.cr;
+package com.sparta.cr.trainee;
 
 public abstract class Trainee implements Trainable{
     private String name;

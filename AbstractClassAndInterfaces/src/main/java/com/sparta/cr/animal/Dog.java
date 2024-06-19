@@ -1,4 +1,4 @@
-package com.sparta.cr;
+package com.sparta.cr.animal;
 
 public class Dog extends Animal{
 

@@ -1,4 +1,4 @@
-package com.sparta.cr;
+package com.sparta.cr.trainee;
 
 public class App {
     public static void main(String[] args) {

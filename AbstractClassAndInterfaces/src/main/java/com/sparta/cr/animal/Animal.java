@@ -1,4 +1,4 @@
-package com.sparta.cr;
+package com.sparta.cr.animal;
 
 //State and Behaviour what something is and what something can do
 public abstract class Animal implements Drinkable{
