@@ -5,6 +5,11 @@ public class ThreeIdenticalNumbers {
         if(intArray.length <3){
             return false;
         }
-        return true;
+        for(int i = 0; i<intArray.length-2; i++){
+            if(i == i+1 && i == i+2){
+                return true;
+            }
+        }
+        return false;
     }
 }

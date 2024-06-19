@@ -29,9 +29,9 @@ public class ThreeIdenticalNumbersTests {
     @ParameterizedTest
     @MethodSource
     @DisplayName("Given Array of less than three numbers return false")
-    void givenArrayLengthLessThanThreeReturnFalse(int[] inputArray, boolean expectedResult){
+    void givenArrayLengthLessThanThreeReturnFalse(int[] inputArray){
         //Arrange
-        //Done in Method Source
+        boolean expectedResult = false;
 
         //Act
         boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
@@ -40,12 +40,35 @@ public class ThreeIdenticalNumbersTests {
         Assertions.assertEquals(expectedResult,actualResult);
     }
 
+    @ParameterizedTest
+    @MethodSource
+    @DisplayName("Given Array of three numbers or more return false if no three consecutive numbers are identical")
+    void givenArrayIfNoThreeConsecutiveNumbersIdenticalReturnFalse(int[] inputArray){
+        //Arrange
+        boolean expectedResult = false;
+
+        //Act
+        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+
+        //Assert
+        Assertions.assertEquals(expectedResult,actualResult);
+
+    }
+
     public static Stream<Arguments> givenArrayLengthLessThanThreeReturnFalse(){
         return Stream.of(
-                Arguments.of(new int[]{0}, false),
-                Arguments.of(new int[]{1,4}, false)
+                Arguments.of(new int[]{0}),
+                Arguments.of(new int[]{1,4})
         );
     }
+    public static Stream<Arguments> givenArrayIfNoThreeConsecutiveNumbersIdenticalReturnFalse(){
+        return Stream.of(
+                Arguments.of(new int[] {2,4,1,2,2,6,4,2,7,8}),
+                Arguments.of(new int[] {1,6,22,5,29,2,5,6,1}),
+                Arguments.of(new int[] {0,0,5})
+        );
+    }
+
 }
 
 
