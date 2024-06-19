@@ -6,7 +6,7 @@ public class ThreeIdenticalNumbers {
             return false;
         }
         for(int i = 0; i<intArray.length-2; i++){
-            if(i == i+1 && i == i+2){
+            if(intArray[i] == intArray[i+1] && intArray[i] == intArray[i+2]){
                 return true;
             }
         }

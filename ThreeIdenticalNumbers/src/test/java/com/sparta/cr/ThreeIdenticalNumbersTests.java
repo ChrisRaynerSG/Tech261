@@ -55,6 +55,20 @@ public class ThreeIdenticalNumbersTests {
 
     }
 
+    @ParameterizedTest
+    @MethodSource
+    @DisplayName("Given Array of three numbers or more return true if three consecutive numbers are identical")
+    void givenArrayIfThreeConsectuiveNumbersIdenticalReturnTrue(int [] inputArray){
+        //Arrange
+        boolean expectedResult = true;
+
+        //Act
+        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
+
+        //Assert
+        Assertions.assertEquals(expectedResult,actualResult);
+    }
+
     public static Stream<Arguments> givenArrayLengthLessThanThreeReturnFalse(){
         return Stream.of(
                 Arguments.of(new int[]{0}),
@@ -68,7 +82,14 @@ public class ThreeIdenticalNumbersTests {
                 Arguments.of(new int[] {0,0,5})
         );
     }
-
+    public static Stream<Arguments> givenArrayIfThreeConsectuiveNumbersIdenticalReturnTrue(){
+        return Stream.of(
+                Arguments.of(new int[]{1,1,1}),
+                Arguments.of(new int[]{1,5,1,2,45,5,9,1,9,9,9}),
+                Arguments.of(new int[]{1,2,3,4,5,5,5,4,3,2,1}),
+                Arguments.of(new int[]{0,0,0})
+        );
+    }
 }
 
 
