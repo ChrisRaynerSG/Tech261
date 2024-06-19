@@ -15,9 +15,11 @@ public class ThreeIdenticalNumbersTests {
         boolean expectedResult = false;
 
         //Act
-        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers();
+        boolean actualResult = ThreeIdenticalNumbers.doesContainThreeConsecutiveIdenticalNumbers(inputArray);
 
         //Assert
         Assertions.assertEquals(expectedResult,actualResult);
     }
 }
+
+
