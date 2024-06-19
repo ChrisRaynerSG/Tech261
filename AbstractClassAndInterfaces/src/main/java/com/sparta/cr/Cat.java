@@ -11,5 +11,22 @@ public class Cat extends Animal{
         System.out.println(super.getName()+ " does not want to play!");
     }
 
+    @Override
+    public void eat() {
+        System.out.println(this.getName() + " is eating.");
+    }
 
+    public void climb(){
+
+    }
+
+    @Override
+    public void drink() {
+
+    }
+
+    @Override
+    public String goToSleep() {
+        return getName() + " is sleeping.";
+    }
 }

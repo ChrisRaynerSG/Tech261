@@ -1,42 +1,14 @@
 package com.sparta.cr;
 
-public class DevOpsTrainee extends Trainee implements Trainable{
-    private String experience;
-    private String[] certifications;
-    private String[] projects;
+public class DevOpsTrainee extends Trainee{
 
-    public String getExperience() {
-        return experience;
+    public DevOpsTrainee(String name, int age, String email, String phone, String[] certifications, String experience, String projects) {
+        super(name, age, email, phone, certifications, experience, projects);
     }
-
-    public void setExperience(String experience) {
-        this.experience = experience;
-    }
-
-    public String[] getCertifications() {
-        return certifications;
-    }
-
-    public void setCertifications(String[] certifications) {
-        this.certifications = certifications;
-    }
-
-    public String[] getProjects() {
-        return projects;
-    }
-
-    public void setProjects(String[] projects) {
-        this.projects = projects;
-    }
-
-    public DevOpsTrainee(String name, int age, String email, String phone) {
-        super(name, age, email, phone);
-    }
-
     public void train(){
-        //Do something
+        System.out.println(getName() + " is in training.");
     }
     public void study(){
-        //Do something else
+        System.out.println(getName() + " is studying.");
     }
 }

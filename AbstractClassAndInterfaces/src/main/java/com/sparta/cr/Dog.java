@@ -17,4 +17,19 @@ public class Dog extends Animal{
     public void play() {
         super.play();
     }
+
+    @Override
+    public void eat() {
+        System.out.println(getName() + " is eating.");
+    }
+
+    @Override
+    public void drink() {
+
+    }
+
+    @Override
+    public String goToSleep() {
+        return getName() + " is sleeping";
+    }
 }
