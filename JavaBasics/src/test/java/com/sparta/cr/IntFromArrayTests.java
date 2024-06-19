@@ -11,7 +11,7 @@ public class IntFromArrayTests {
 
     @Test
     @DisplayName("Given an empty array of integers, then 0 should be returned")
-    void GivenEmptyArrayReturnsZero(){
+    void givenEmptyArrayReturnsZero(){
 
         //Arrange
         int[] arrayToTest = {};
@@ -26,7 +26,7 @@ public class IntFromArrayTests {
 
     @Test
     @DisplayName("Given an array of integers, then an integer from that array should be returned ")
-    void GivenArrayOfIntsReturnSingleInt(){
+    void givenArrayOfIntsReturnSingleInt(){
 
         //Arrange
         int[] arrayToTest = {1};
@@ -42,7 +42,7 @@ public class IntFromArrayTests {
     @ParameterizedTest
     @MethodSource
     @DisplayName("Given an array of integers, then a single int displaying all the integers in the array should be returned ")
-    public void GivenArrayOfIntsReturnSingleIntWithArrayContents(int[] arrayInput, int numberExpected){
+    public void givenArrayOfIntsReturnSingleIntWithArrayContents(int[] arrayInput, int numberExpected){
 
         //Arrange
         //Done in method source
@@ -57,7 +57,7 @@ public class IntFromArrayTests {
     @ParameterizedTest
     @MethodSource
     @DisplayName("Given an array of integers which starts with 0's return a single int dropping the leading 0's but keeps any subsequent 0's")
-    public void GivenArrayOfIntsReturnSingleIntWithNoLeadingZeros(int[] arrayInput, int numberExpected){
+    public void givenArrayOfIntsReturnSingleIntWithNoLeadingZeros(int[] arrayInput, int numberExpected){
         //Arrange
         //Done in Method source
 
@@ -71,7 +71,7 @@ public class IntFromArrayTests {
     @ParameterizedTest
     @MethodSource
     @DisplayName("Given an array of integers including negative integers getIntFromArray returns single int with no negative signs")
-    public void GivenArrayOfIntsWithNegativesReturnSingleIntWithArrayContents(int[] arrayInput, int numberExpected){
+    public void givenArrayOfIntsWithNegativesReturnSingleIntWithArrayContents(int[] arrayInput, int numberExpected){
         //Arrange
         //Done in Method Source
 
@@ -82,7 +82,7 @@ public class IntFromArrayTests {
         Assertions.assertEquals(numberExpected,actualInt);
     }
 
-    public static Stream<Arguments> GivenArrayOfIntsReturnSingleIntWithArrayContents(){
+    public static Stream<Arguments> givenArrayOfIntsReturnSingleIntWithArrayContents(){
         return Stream.of(
                 Arguments.of(new int[]{1,4,5,7}, 1457),
                 Arguments.of(new int[]{2,5,7,12,5},257125),
@@ -90,14 +90,14 @@ public class IntFromArrayTests {
         );
     }
 
-    public static Stream<Arguments> GivenArrayOfIntsReturnSingleIntWithNoLeadingZeros(){
+    public static Stream<Arguments> givenArrayOfIntsReturnSingleIntWithNoLeadingZeros(){
         return Stream.of(
                 Arguments.of(new int[]{0,0,1,4,5}, 145),
                 Arguments.of(new int[]{0,0,3,0,5,0}, 3050),
                 Arguments.of(new int[]{0,0,0,0,0,0}, 0)
         );
     }
-    public static Stream<Arguments> GivenArrayOfIntsWithNegativesReturnSingleIntWithArrayContents(){
+    public static Stream<Arguments> givenArrayOfIntsWithNegativesReturnSingleIntWithArrayContents(){
         return Stream.of(
                 Arguments.of(new int[]{1,-4,5,-7}, 1457),
                 Arguments.of(new int[]{2,-5,7,12,-5},257125),
