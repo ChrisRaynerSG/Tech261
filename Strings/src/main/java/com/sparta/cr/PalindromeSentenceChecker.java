@@ -1,7 +1,6 @@
 package com.sparta.cr;
 import java.util.ArrayList;
 
-
 public class PalindromeSentenceChecker {
 
     static String getLongestPalindromes(String inputString) {
@@ -36,14 +35,14 @@ public class PalindromeSentenceChecker {
             }
         }
         if (longestPalindromes.isEmpty()) { //If no palindromes found return default output string
-            return outPutString.toString();
+            //No change to output string
         }
         else if (longestPalindromes.size() == 1) { //If only one palindrome display correct message
             String palindromeToAdd = (longestPalindromes.getFirst());
             longestPalindromesOutput.append(palindromeToAdd);
             outPutString.setLength(0);
             outPutString.append("The longest Palindrome in this sentence is: ").append(longestPalindromesOutput);
-            return outPutString.toString();
+
         }
         else {
             for (String palindrome : longestPalindromes) { //If multiple palindromes display correct message
@@ -51,7 +50,8 @@ public class PalindromeSentenceChecker {
             }
             outPutString.setLength(0);
             outPutString.append("The longest Palindromes in this sentence are:").append(longestPalindromesOutput);
-            return outPutString.toString();
+
         }
+        return outPutString.toString();
     }
 }
