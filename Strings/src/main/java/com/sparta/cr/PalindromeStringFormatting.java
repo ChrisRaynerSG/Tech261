@@ -1,9 +1,8 @@
 package com.sparta.cr;
 import java.util.ArrayList;
-import java.util.List;
 
 public class PalindromeStringFormatting {
-    static final String ACCEPTABLE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz ";
+    private static final String ACCEPTABLE_CHARACTERS = "abcdefghijklmnopqrstuvwxyz ";
 
     static String getStripSpecialCharacters(String inputString){
         StringBuilder outputString = new StringBuilder();

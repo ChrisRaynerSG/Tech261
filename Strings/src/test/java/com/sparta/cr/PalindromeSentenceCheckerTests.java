@@ -18,7 +18,7 @@ public class PalindromeSentenceCheckerTests {
         String expected = "There are no Palindromes in this sentence";
 
         //Act
-        String actual = PalindromeSentenceChecker.getLongestPalindromes(PalindromeStringFormatting.getArrayOfIndividualWords(inputString));
+        String actual = PalindromeSentenceChecker.getLongestPalindromes(inputString);
 
         //Assert
         Assertions.assertEquals(expected,actual);
@@ -30,7 +30,7 @@ public class PalindromeSentenceCheckerTests {
         String expected = "The longest Palindrome in this sentence is: madam";
 
         //Act
-        String actual = PalindromeSentenceChecker.getLongestPalindromes(PalindromeStringFormatting.getArrayOfIndividualWords(inputString));
+        String actual = PalindromeSentenceChecker.getLongestPalindromes(inputString);
 
         //Assert
         Assertions.assertEquals(expected,actual);
@@ -42,7 +42,7 @@ public class PalindromeSentenceCheckerTests {
         String expected = "The longest Palindrome in this sentence is: madam";
 
         //Act
-        String actual = PalindromeSentenceChecker.getLongestPalindromes(PalindromeStringFormatting.getArrayOfIndividualWords(inputString));
+        String actual = PalindromeSentenceChecker.getLongestPalindromes(inputString);
 
         //Assert
         Assertions.assertEquals(expected,actual);
@@ -55,7 +55,7 @@ public class PalindromeSentenceCheckerTests {
         String expected = "The longest Palindrome in this sentence is: racecar";
 
         //Act
-        String actual = PalindromeSentenceChecker.getLongestPalindromes(PalindromeStringFormatting.getArrayOfIndividualWords(inputString));
+        String actual = PalindromeSentenceChecker.getLongestPalindromes(inputString);
 
         //Assert
         Assertions.assertEquals(expected,actual);
@@ -67,7 +67,7 @@ public class PalindromeSentenceCheckerTests {
         //Method Source
 
         //Act
-        String actual = PalindromeSentenceChecker.getLongestPalindromes(PalindromeStringFormatting.getArrayOfIndividualWords(inputString));
+        String actual = PalindromeSentenceChecker.getLongestPalindromes(inputString);
 
         //Assert
         Assertions.assertEquals(expected,actual);
@@ -78,7 +78,8 @@ public class PalindromeSentenceCheckerTests {
                 Arguments.of("Racecar is the same length as ghibihg","The longest Palindromes in this sentence are: racecar ghibihg"),
                 Arguments.of("Anna is a palindrome, so is racecar and ghibihg","The longest Palindromes in this sentence are: racecar ghibihg"),
                 Arguments.of("Racecar is a palindrome, so is anna, but Rotavator, Malayalam and Googogoog are even longer palindromes", "The longest Palindromes in this sentence are: rotavator malayalam googogoog"),
-                Arguments.of("Racecar, Anna, Deified", "The longest Palindromes in this sentence are: racecar deified")
+                Arguments.of("Racecar, Anna, Deified", "The longest Palindromes in this sentence are: racecar deified"),
+                Arguments.of("Racecar, Anna, Deified, Racecar, Deified, Deified","The longest Palindromes in this sentence are: racecar deified")
         );
     }
 }

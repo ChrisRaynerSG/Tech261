@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class PalindromeSentenceChecker {
 
-    static String getLongestPalindromes(ArrayList<String> stringArrayList) {
+    static String getLongestPalindromes(String inputString) {
+        ArrayList<String> stringArrayList;
+        stringArrayList = PalindromeStringFormatting.getArrayOfIndividualWords(inputString);
         StringBuilder outPutString = new StringBuilder();
         outPutString.append("There are no Palindromes in this sentence");
         ArrayList<String> longestPalindromes = new ArrayList<>();
 
-        if (stringArrayList == null || stringArrayList.isEmpty()) {
+        if (stringArrayList.isEmpty()) {
             return outPutString.toString();
         }
         StringBuilder longestPalindromesOutput = new StringBuilder();
@@ -19,28 +21,24 @@ public class PalindromeSentenceChecker {
                 if (longestPalindromes.isEmpty()) {
                     longestPalindromes.add(word);
                 }
-                for (String palindrome : longestPalindromes) { //Loop through already present palindromes
-                    if (word.length() < palindrome.length()) { //If new word is not longer than current longest, do nothing.
-
-                    }
-                    else if (word.length() == palindrome.length()){
-                        if (!word.equals(palindrome)){
-                            longestPalindromes.add(word);
-                            break;
-                        }
-                    }
-                    else{//if new word is longer than any already present remove all palindromes from list and add new one
-                        longestPalindromes.clear();
+                else if(word.length() < longestPalindromes.getFirst().length()){
+                    //If new word is not longer than current longest, do nothing.
+                }
+                else if (word.length() == longestPalindromes.getFirst().length()) { //If new word is same length as palindrome and not the same as any word in list add word to list of longest palindromes
+                    if (!longestPalindromes.contains(word)) {
                         longestPalindromes.add(word);
                     }
                 }
+                else{ //If new word is longer, clear the list and add the new word
+                    longestPalindromes.clear();
+                    longestPalindromes.add(word);
+                }
             }
         }
-
-        if (longestPalindromes.isEmpty()) {
+        if (longestPalindromes.isEmpty()) { //If no palindromes found return default output string
             return outPutString.toString();
         }
-        else if (longestPalindromes.size() == 1) {
+        else if (longestPalindromes.size() == 1) { //If only one palindrome display correct message
             String palindromeToAdd = (longestPalindromes.getFirst());
             longestPalindromesOutput.append(palindromeToAdd);
             outPutString.setLength(0);
@@ -48,7 +46,7 @@ public class PalindromeSentenceChecker {
             return outPutString.toString();
         }
         else {
-            for (String palindrome : longestPalindromes) {
+            for (String palindrome : longestPalindromes) { //If multiple palindromes display correct message
                 longestPalindromesOutput.append(" ").append(palindrome);
             }
             outPutString.setLength(0);
