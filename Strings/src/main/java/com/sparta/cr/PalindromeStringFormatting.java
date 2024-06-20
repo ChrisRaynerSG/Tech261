@@ -22,9 +22,9 @@ public class PalindromeStringFormatting {
         return outputString.toString();
     }
 
-    static List<String> getArrayOfIndividualWords(String inputString){
+    static ArrayList<String> getArrayOfIndividualWords(String inputString){
         StringBuilder singleWord = new StringBuilder();
-        List<String> outputStringArrayList = new ArrayList<String>();
+        ArrayList<String> outputStringArrayList = new ArrayList<String>();
 
         if (inputString == null || inputString.isEmpty()) {
             return outputStringArrayList;

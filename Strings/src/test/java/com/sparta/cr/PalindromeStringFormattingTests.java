@@ -64,13 +64,13 @@ public class PalindromeStringFormattingTests {
 
     @ParameterizedTest
     @MethodSource
-    void givenStringReturnStringListOfEachIndividualWord(String input, List expected){
+    void givenStringReturnStringListOfEachIndividualWord(String input, ArrayList expected){
 
         //Act
-        List<String> actual = new ArrayList<>(PalindromeStringFormatting.getArrayOfIndividualWords(input));
+        ArrayList<String> actual = new ArrayList<>(PalindromeStringFormatting.getArrayOfIndividualWords(input));
 
         //Assert
-        Assertions.assertEquals(expected,actual);
+        Assertions.assertArrayEquals(expected.toArray(),actual.toArray());
     }
 
     static Stream<Arguments> givenStringReturnStringWithNoSpecialCharacters(){
@@ -92,10 +92,10 @@ public class PalindromeStringFormattingTests {
     }
 
     static Stream<Arguments> givenStringReturnStringListOfEachIndividualWord(){
-        List example1 = new ArrayList(List.of("hello","i","am","a","string"));
-        List example2 = new ArrayList(List.of("hello","i","am","a","strng"));
-        List example3 = new ArrayList(List.of(""));
-        List example4 = new ArrayList(List.of("hello"));
+        ArrayList<String> example1 = new ArrayList(List.of("hello","i","am","a","string"));
+        ArrayList<String> example2 = new ArrayList(List.of("hello","i","am","a","strng"));
+        ArrayList<String> example3 = new ArrayList(List.of(""));
+        ArrayList<String> example4 = new ArrayList(List.of("hello"));
 
         return Stream.of(
                 Arguments.of("hello i am a string", example1),
