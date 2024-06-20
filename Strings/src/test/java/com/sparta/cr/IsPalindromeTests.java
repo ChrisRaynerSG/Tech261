@@ -65,7 +65,7 @@ public class IsPalindromeTests {
         boolean expectedValue = true;
 
         //Act
-        boolean actualValue = IsPalindrome.isPalindrome(stringToCheck);
+        boolean actualValue = IsPalindromeStringBuilder.isPalindrome(stringToCheck);
 
         //Assert
         Assertions.assertEquals(expectedValue,actualValue);
@@ -78,7 +78,7 @@ public class IsPalindromeTests {
         boolean expectedValue = true;
 
         //Act
-        boolean actualValue = IsPalindrome.isPalindrome(stringToCheck);
+        boolean actualValue = IsPalindromeStringBuilder.isPalindrome(stringToCheck);
 
         //Assert
         Assertions.assertEquals(expectedValue,actualValue);
@@ -104,7 +104,7 @@ public class IsPalindromeTests {
         boolean expectedValue = true;
 
         //Act
-        boolean actualValue = IsPalindrome.isPalindrome(stringToCheck);
+        boolean actualValue = IsPalindromeStringBuilder.isPalindrome(stringToCheck);
 
         //Assert
         Assertions.assertEquals(expectedValue,actualValue);
