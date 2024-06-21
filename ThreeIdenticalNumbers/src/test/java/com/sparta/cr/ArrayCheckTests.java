@@ -69,23 +69,23 @@ public class ArrayCheckTests {
 
     public static Stream<Arguments> givenArrayLengthLessThanThreeReturnFalse(){
         return Stream.of(
-                Arguments.of(new int[]{0}),
-                Arguments.of(new int[]{1,4})
+                Arguments.of((Object) new int[]{0}),
+                Arguments.of((Object) new int[]{1,4})
         );
     }
     public static Stream<Arguments> givenArrayIfNoThreeConsecutiveNumbersIdenticalReturnFalse(){
         return Stream.of(
-                Arguments.of(new int[] {2,4,1,2,-2,2,4,2,7,8}),
-                Arguments.of(new int[] {1,6,22,5,29,2,5,6,1}),
-                Arguments.of(new int[] {0,0,5})
+                Arguments.of((Object) new int[] {2,4,1,2,-2,2,4,2,7,8}),
+                Arguments.of((Object) new int[] {1,6,22,5,29,2,5,6,1}),
+                Arguments.of((Object) new int[] {0,0,5})
         );
     }
     public static Stream<Arguments> givenArrayIfThreeConsectuiveNumbersIdenticalReturnTrue(){
         return Stream.of(
-                Arguments.of(new int[]{1,1,1}),
-                Arguments.of(new int[]{1,5,1,2,45,5,9,1,9,9,9}),
-                Arguments.of(new int[]{1,2,3,4,5,5,5,4,3,2,1}),
-                Arguments.of(new int[]{0,0,0})
+                Arguments.of((Object) new int[]{1,1,1}),
+                Arguments.of((Object) new int[]{1,5,1,2,45,5,9,1,9,9,9}),
+                Arguments.of((Object) new int[]{1,2,3,4,5,5,5,4,3,2,1}),
+                Arguments.of((Object) new int[]{0,0,0})
         );
     }
 }
