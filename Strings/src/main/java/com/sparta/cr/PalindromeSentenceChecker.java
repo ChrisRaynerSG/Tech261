@@ -3,7 +3,9 @@ import java.util.ArrayList;
 
 public class PalindromeSentenceChecker {
 
+
     static String getLongestPalindromes(String inputString) {
+        PalindromeLogger palindromeLogger = new PalindromeLogger();
         ArrayList<String> stringArrayList;
         stringArrayList = PalindromeStringFormatting.getArrayOfIndividualWords(inputString);
         StringBuilder outPutString = new StringBuilder();
@@ -18,10 +20,13 @@ public class PalindromeSentenceChecker {
         for (String word : stringArrayList) {
             if (IsPalindrome.isPalindrome(word)) {
                 if (longestPalindromes.isEmpty()) {
+                    palindromeLogger.getLogger().info("Initial palindrome set up");
                     longestPalindromes.add(word);
                 }
                 else if(word.length() < longestPalindromes.getFirst().length()){
                     //If new word is not longer than current longest, do nothing.
+                    palindromeLogger.getLogger().finest("Word is palindrome but not the longest");
+
                 }
                 else if (word.length() == longestPalindromes.getFirst().length()) { //If new word is same length as palindrome and not the same as any word in list add word to list of longest palindromes
                     if (!longestPalindromes.contains(word)) {
@@ -38,7 +43,7 @@ public class PalindromeSentenceChecker {
             //No change to output string
         }
         else if (longestPalindromes.size() == 1) { //If only one palindrome display correct message
-            String palindromeToAdd = (longestPalindromes.getFirst());
+            String palindromeToAdd = longestPalindromes.getFirst();
             longestPalindromesOutput.append(palindromeToAdd);
             outPutString.setLength(0);
             outPutString.append("The longest Palindrome in this sentence is: ").append(longestPalindromesOutput);

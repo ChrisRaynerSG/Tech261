@@ -79,7 +79,7 @@ public class PalindromeSentenceCheckerTests {
                 Arguments.of("Anna is a palindrome, so is racecar and ghibihg","The longest Palindromes in this sentence are: racecar ghibihg"),
                 Arguments.of("Racecar is a palindrome, so is anna, but Rotavator, Malayalam and Googogoog are even longer palindromes", "The longest Palindromes in this sentence are: rotavator malayalam googogoog"),
                 Arguments.of("Racecar, Anna, Deified", "The longest Palindromes in this sentence are: racecar deified"),
-                Arguments.of("Racecar, Anna, Deified, Racecar, Deified, Deified","The longest Palindromes in this sentence are: racecar deified")
+                Arguments.of("Racecar, Anna, Deified,     Racecar, Deified, Deified    ","The longest Palindromes in this sentence are: racecar deified")
         );
     }
 }

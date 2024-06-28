@@ -17,11 +17,11 @@ public class PalindromeStringFormatting {
                     break;
                 }
             }
-        }
+        } //REFACTOR THIS IMMEDIATELY
         return outputString.toString();
     }
 
-    static ArrayList<String> getArrayOfIndividualWords(String inputString){
+    public static ArrayList<String> getArrayOfIndividualWords(String inputString){
         StringBuilder singleWord = new StringBuilder();
         ArrayList<String> outputStringArrayList = new ArrayList<String>();
 
@@ -39,7 +39,7 @@ public class PalindromeStringFormatting {
                 }
             }
             else{
-                if (!singleWord.isEmpty()) {
+                if (!singleWord.isEmpty()&& ! outputStringArrayList.contains(singleWord.toString())) {
                     outputStringArrayList.add(singleWord.toString());
                 }
                 singleWord.setLength(0);
