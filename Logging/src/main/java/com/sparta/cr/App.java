@@ -18,7 +18,7 @@ public class App {
             FileHandler fileHandler = new FileHandler("src/main/resources/log-file.log", true);
             fileHandler.setLevel(Level.ALL);
             fileHandler.setFormatter(new CustomFormatter());
-            logger.addHandler(fileHandler);
+
         }
         catch (IOException e){
             throw new RuntimeException(e);
