@@ -14,7 +14,7 @@ public class HamcrestExampleTest {
 
     @BeforeEach
     void setup(){
-        chris = new Spartan(1,"Chris","Java", LocalDate.of(2000,1,1));
+        chris = new Spartan(1,"Chris","Java", LocalDate.of(2027,1,1));
     }
 
     @Nested
@@ -49,5 +49,22 @@ public class HamcrestExampleTest {
         void checkThatNameEndsWithRis(){
             assertThat(chris.getName(), endsWith("ris"));
         }
+        @Test
+        @DisplayName("Check that date is valid Date")
+        void checkThatDateIsValid(){
+            assertThat(chris.getStartDate(), is(greaterThan(LocalDate.now())));
+        }
+        @Test
+        @DisplayName("Check that spartan is a Spartan")
+        void checkThatSpartanExists(){
+            assertThat(chris, is(instanceOf(Spartan.class)));
+        }
+        @Test
+        @DisplayName("Check that name begins with ch")
+        void checkThatNameBeginsWith(){
+            assertThat(chris.getName(), startsWith("Ch"));
+        }
+//        @Test
+//        @DisplayName("")
     }
 }
