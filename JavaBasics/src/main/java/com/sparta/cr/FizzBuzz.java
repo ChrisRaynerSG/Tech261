@@ -3,6 +3,8 @@ package com.sparta.cr;
 public class FizzBuzz {
     public static String getFizzBuzzFrom(int number){
         String fizzBuzzString = Integer.toString(number);
+        StringBuilder sbTest = new StringBuilder();
+
 
         if(FizzBuzz.isMultipleOfThree(number)){
             if(FizzBuzz.isMultipleOfFive(number)){
@@ -23,4 +25,6 @@ public class FizzBuzz {
     public static boolean isMultipleOfFive(int input){
         return (input%5 == 0);
     }
+
+
 }
